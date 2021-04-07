@@ -1,4 +1,3 @@
-
 resource "aws_instance" "instance" {
   ami                    = data.aws_ami.centos.id
   instance_type          = var.Instancetype
@@ -6,7 +5,7 @@ resource "aws_instance" "instance" {
   monitoring             = "true"
   key_name = var.key_name
   subnet_id  = var.subnet_id
-  security_groups = ["${var.vpc_security_group_ids}"]
+  vpc_security_group_ids = var.vpc_security_group_ids
 tags = {
     Name = var.name
     Environment = var.environment
