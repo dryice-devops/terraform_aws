@@ -1,6 +1,6 @@
 variable "aws_accesskey" {
-default	 = "ASIA3WEU6XXXXXXXXXXXXX"
-description	 = "Enter Access Key"
+default  = "ASIA3WEU6XXXXXXXXXXXXX"
+description      = "Enter Access Key"
 }
 variable "aws_secretkey" {
 default = "bzNmvUZvsdidkhJzXXXXXXXXXXXXXXXXXXXXXXXXXX"
@@ -12,12 +12,12 @@ default = "development"
 }
 variable "vpc_security_group_ids"{
   description = "security group"
- default =[]
+  type        = list(string)
+  default =[]
 }
 
 variable "subnet_id" {
   description = "Subnet ID"
-##default = []
 }
 
 variable "bJustification" {
@@ -35,7 +35,6 @@ variable "name" {
 
 variable "Instancetype" {
   description = "The size of instance to launch"
-  default     = ""
 }
 
 variable "key_name" {
